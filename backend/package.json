@@ -1,0 +1,18 @@
+{
+  "name": "asciified-backend",
+  "version": "1.0.0",
+  "description": "ASCII Art API with a good-looking Web App.",
+  "main": "src/app.js",
+  "repository": "https://github.com/thelicato/asciified",
+  "author": "Angelo Delicato <delicato.angelo@gmail.com>",
+  "license": "GPL-3.0",
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "dependencies": {
+    "@koa/router": "^10.1.1",
+    "figlet": "^1.5.2",
+    "koa": "^2.13.4",
+    "koa-qs": "^3.0.0"
+  }
+}

@@ -1,9 +1,0 @@
-{
-  "name": "asciified",
-  "version": "1.0.0",
-  "description": "ASCII Art API to txt files.",
-  "main": "index.js",
-  "repository": "https://github.com/thelicato/asciified",
-  "author": "Angelo Delicato <delicato.angelo@gmail.com>",
-  "license": "GPL-3.0"
-}
