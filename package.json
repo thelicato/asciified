@@ -10,6 +10,7 @@
       "heroku-postbuild": "cd backend && yarn install"
     },
     "engines": {
-        "node": "14.17.4"
+        "node": "14.17.4",
+        "yarn": "1.22.11"
     }
   }
