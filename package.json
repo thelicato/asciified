@@ -1,0 +1,12 @@
+{
+    "name": "asciified",
+    "version": "1.0.0",
+    "description": "ASCII Art API with a good-looking Web App.",
+    "repository": "https://github.com/thelicato/asciified",
+    "author": "Angelo Delicato <delicato.angelo@gmail.com>",
+    "license": "GPL-3.0",
+    "scripts": {
+      "start": "node backend/src/app.js",
+      "heroku-postbuild": "cd backend && yarn install"
+    }
+  }
