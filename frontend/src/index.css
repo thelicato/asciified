@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-slate-700;
+    @apply leading-8;
+    @apply overflow-x-hidden;
+  }
+  #root {
+    @apply flex;
+    @apply flex-col;
+    @apply h-screen;
+  }
+  a {
+    @apply text-rose-600;
+    @apply transition-colors;
+    @apply duration-300;
+  }
+  a:hover {
+    @apply text-rose-800;
+    @apply underline;
+  }
+  h2 {
+    @apply text-5xl;
+    @apply py-2;
+    @apply font-light;
+    @apply font-Karla;
+  }
+  h3 {
+    @apply text-2xl;
+    @apply font-semibold;
+    @apply my-4;
+    @apply font-Karla;
+  }
+}
