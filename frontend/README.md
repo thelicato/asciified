@@ -35,7 +35,7 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 ## Roadmap
-- [ ] Edit logo
+- [ ] Edit logo and favicon
 - [ ] Check Responsiveness
 - [ ] Add copy to ``<pre>`` tags
 - [ ] Add popper
