@@ -40,4 +40,12 @@ router.get('/', async (ctx) => {
     }
 })
 
+//GET list of fonts
+router.get('/fonts', async (ctx) => {
+    logger.info(`Received request: ${ctx.URL}`);
+
+    ctx.response.status = 200;
+    ctx.response.body = JSON.stringify(fonts);
+})
+
 module.exports = router;
