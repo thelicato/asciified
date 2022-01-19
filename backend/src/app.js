@@ -9,7 +9,7 @@ const api = require('./api');
 const logger = require('./logger');
 // ENV VARS   *
 const PORT = process.env.PORT || 4200;
-const NODE_ENV = prove.env.NODE_ENV || 'development';
+const NODE_ENV = process.env.NODE_ENV || 'development';
 
 const startBackend = async () => {
     logger.info(`Starting up API routes on port ${PORT}...`);
