@@ -1,7 +1,9 @@
 // Koa
 const Koa = require('koa');
 const app = new Koa();
-const serve = require('koa-static')
+const serve = require('koa-static');
+const mount = require('koa-mount');
+const path = require('path')
 require('koa-qs')(app, 'first');
 // API
 const api = require('./api');
