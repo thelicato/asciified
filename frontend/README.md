@@ -37,7 +37,7 @@ Your app is ready to be deployed!
 ## Roadmap
 - [x] Figlet as images when too big
 - [ ] Edit logo and favicon
-- [ ] Check Responsiveness
+- [x] Check Responsiveness
 - [ ] Add copy to ``<pre>`` tags
 - [ ] Add popper
 - [ ] Add description and reference to GitHub
