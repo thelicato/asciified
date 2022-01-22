@@ -13,7 +13,12 @@
 
 A simple ASCII Art API with a good-looking Web App.
 
+[![made-with-javascript](https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg)](https://www.javascript.com)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/cybersecsi/RAUDI/blob/main/LICENSE)
+
+## Overview
+
+In the webapp the user can type something and see the **asciified** version in **every font**. The user can also easily copy the text and, if the text is too long, it gets converted into an image using *dom-to-image*. Anyway it is still copyable.
 
 ## Development
 This is a React application, so there are the usual available scripts.
@@ -33,15 +38,6 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
-
-## Roadmap
-- [x] Figlet as images when too big
-- [x] Edit logo and favicon
-- [x] Check Responsiveness
-- [x] Add copy to ``<pre>`` tags
-- [x] Add description and reference to GitHub
-- [x] Add loader
-- [ ] Make the image copyable as well
 
 ## License
 **asciified** is an open-source and free software released under the [GNU GPL v3](https://github.com/thelicato/asciified/blob/main/LICENSE).
