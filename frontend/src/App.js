@@ -4,6 +4,8 @@ import { FontsProvider } from './context/fonts';
 import { Header, Footer} from './partials';
 /* CONTENT */
 import Main from './Main';
+/* GITHUB CORNER */
+import GithubCorner from 'react-github-corner';
 
 const App = () => {
   return (
@@ -12,6 +14,7 @@ const App = () => {
         <Header/>
         <Main />
         <Footer/>
+        <GithubCorner href="https://github.com/thelicato/asciified" />
       </FontsProvider>
     </>
   )

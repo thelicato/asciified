@@ -39,9 +39,7 @@ Your app is ready to be deployed!
 - [x] Edit logo and favicon
 - [x] Check Responsiveness
 - [ ] Add copy to ``<pre>`` tags
-- [ ] Add popper
-- [ ] Add description and reference to GitHub
-- [ ] Add animations
+- [x] Add description and reference to GitHub
 - [ ] Add loader
 
 ## License

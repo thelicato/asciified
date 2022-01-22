@@ -85,6 +85,16 @@ const Main = () => {
             <div id="figlet-container" className="md:container mx-auto h-full">
                 <div className="w-4/5 md:w-full mx-auto h-full">
 
+                    {/* Brief description */}
+                    <div>
+                        <p className="text-justify">
+                            <b>asciified</b> is a small webapp that gives you the ability to create <b>figlets</b> using the <a href="" target="_blank" rel="noreferrer">figlet</a> package. You can either use this webapp and copy the figlet you like or you can also use the API I exposed for you. Make HTTP GET requests to <pre className="inline">/api</pre> and set the text parameter.<br/>
+                            <b>Example</b>: <pre className="inline">/api?text=ASCII+art</pre> <br/>
+                            Optionally you can set the font parameter to specify the output font (the available fonts are the ones you see in this page). <br/>
+                            <b>Example</b>: <pre className="inline">/make?text=ASCII+art&font=trek</pre>
+                        </p>
+                    </div>
+
                     {/* Input text */}
                     <h2 className="text-center">Have some fun...</h2>
                     <label className="relative block my-6">

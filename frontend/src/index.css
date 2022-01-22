@@ -16,13 +16,13 @@
     @apply h-screen;
   }
   a {
-    @apply text-rose-600;
+    @apply text-sky-400;
+    @apply underline;
     @apply transition-colors;
     @apply duration-300;
   }
   a:hover {
-    @apply text-rose-800;
-    @apply underline;
+    @apply text-sky-600;
   }
   h2 {
     @apply text-5xl;
