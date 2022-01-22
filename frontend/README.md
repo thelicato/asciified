@@ -40,7 +40,7 @@ Your app is ready to be deployed!
 - [x] Check Responsiveness
 - [ ] Add copy to ``<pre>`` tags
 - [x] Add description and reference to GitHub
-- [ ] Add loader
+- [x] Add loader
 
 ## License
 **asciified** is an open-source and free software released under the [GNU GPL v3](https://github.com/thelicato/asciified/blob/main/LICENSE).
