@@ -13,7 +13,10 @@ const FontsProvider = ({children}) => {
                 const message = `An error has occured: ${response.status}`;
                 throw new Error(message);
             }
-            const _fonts = await response.json();
+            let _fonts = await response.json();
+            // There are problem with the 'Fraktur' font when converting to image
+            _fonts.splice(_fonts.indexOf('Fraktur'))
+            // Set state
             setFonts(_fonts);
             setFontsLoaded(true);
         }
