@@ -117,7 +117,7 @@ const Main = () => {
                                 <div className="flex justify-center rounded-lg shadow-lg bg-white w-full mb-8 py-3">
                                     {figletObj.png !== null ? (
                                         <>
-                                            <ImgClipboard font={key} figletTxt={figletObj.txt} png={figletObj.png} />
+                                            <ImgClipboard fontname={key} figletTxt={figletObj.txt} png={figletObj.png} />
                                         </>
                                     ) : (
                                         <>
