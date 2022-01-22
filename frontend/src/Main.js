@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useFonts } from "./context/fonts";
 import { asyncFiglet, makeImage } from './helper';
 import { parseFont } from 'figlet';
-import { Loading, FigletClipboard } from "./components";
+import { Loading, FigletClipboard, ImgClipboard } from "./components";
 
 const DEFAULT_TXT = 'hello'
 
@@ -97,7 +97,7 @@ const Main = () => {
                             onKeyDown={handleOnKeyDown}
                         />
                         <button 
-                            className="absolute inset-y-0 right-0 flex items-center px-4 bg-sky-600 hover:bg-sky-500 rounded-r-lg fill-gray-200 hover:fill-white transition-colors duration-300"
+                            className="absolute inset-y-0 right-0 flex items-center px-4 bg-sky-600 hover:bg-sky-500 active:bg-sky-400 rounded-r-lg fill-gray-200 hover:fill-white transition-colors duration-300"
                             onClick={updateFiglets}
                         >
                             
@@ -116,13 +116,12 @@ const Main = () => {
                                 <h3>{figletObj.fontname}</h3>
                                 <div className="flex justify-center rounded-lg shadow-lg bg-white w-full mb-8 py-3">
                                     {figletObj.png !== null ? (
-                                        <div className="w-11/12 text-center">
-                                            <p className="mb-4">The Figlet was to long and was converted into an image. You can copy it anyway</p>
-                                            <img src={figletObj.png} alt={`${figletObj.txt}-${key}`}/>
-                                        </div>
+                                        <>
+                                            <ImgClipboard font={key} figletTxt={figletObj.txt} png={figletObj.png} />
+                                        </>
                                     ) : (
                                         <>
-                                            <FigletClipboard figletTxt={figletObj.txt} />
+                                            <FigletClipboard id={key} figletTxt={figletObj.txt} />
                                         </>
                                     )}
                                 </div>

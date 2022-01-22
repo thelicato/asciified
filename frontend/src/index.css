@@ -39,9 +39,9 @@
   .clipboardcode-btn {
       @apply transition-colors;
       @apply absolute;
-      @apply bg-cyan-600 ;
-      @apply hover:bg-cyan-800;
-      @apply active:bg-cyan-400;
+      @apply bg-sky-600 ;
+      @apply hover:bg-sky-500;
+      @apply active:bg-sky-400;
       @apply flex;
       @apply items-center;
       @apply p-2;

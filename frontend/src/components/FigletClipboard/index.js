@@ -8,7 +8,7 @@ const FigletClipboard = (props) => {
     // Style
     return (
         <div key={props.key} className="w-full flex justify-center relative group">
-            <pre id={props.key} ref={clipboard.target} className="text-base text-center font-bold inline pb-4 pt-12 ">
+            <pre id={props.id} ref={clipboard.target} className="text-base text-center font-bold inline pb-4 pt-12 ">
                 {figletLines.map((line) => {
                     return (
                         <>{line}<br/></>
