@@ -36,4 +36,20 @@
     @apply my-4;
     @apply font-Karla;
   }
+  .clipboardcode-btn {
+      @apply transition-colors;
+      @apply absolute;
+      @apply bg-cyan-600 ;
+      @apply hover:bg-cyan-800;
+      @apply active:bg-cyan-400;
+      @apply flex;
+      @apply items-center;
+      @apply p-2;
+      @apply duration-200;
+      @apply h-8; 
+      @apply rounded;
+      @apply inset-y-0;
+      @apply top-2;
+      @apply right-2;
+    }
 }

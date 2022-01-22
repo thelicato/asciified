@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useFonts } from "./context/fonts";
 import { asyncFiglet, makeImage } from './helper';
 import { parseFont } from 'figlet';
-import { Loading } from "./components";
+import { Loading, FigletClipboard } from "./components";
 
 const DEFAULT_TXT = 'hello'
 
@@ -53,19 +53,6 @@ const Main = () => {
         setFigletObjects(_figletObjects);        
     }
 
-    const printFiglet = (figletTxt, key) => {
-        const figletLines = figletTxt.split('\n');
-        return (
-            <pre id={key} className="text-base text-center font-bold inline">
-                {figletLines.map((line) => {
-                    return (
-                        <>{line}<br/></>
-                    )
-                })}
-            </pre>
-        )
-    }
-
     const updateFiglets = () => {
         const initialTxt = userInput.current.value
         if (initialTxt.length > 0) {
@@ -89,7 +76,7 @@ const Main = () => {
                     {/* Brief description */}
                     <div>
                         <p className="text-justify">
-                            <b>asciified</b> is a small webapp that gives you the ability to create <b>figlets</b> using the <a href="" target="_blank" rel="noreferrer">figlet</a> package. You can either use this webapp and copy the figlet you like or you can also use the API I exposed for you. Make HTTP GET requests to <pre className="inline">/api</pre> and set the text parameter.<br/>
+                            <b>asciified</b> is a small webapp that gives you the ability to create <b>figlets</b> using the <a href="https://www.npmjs.com/package/figlet" target="_blank" rel="noreferrer">figlet</a> package. You can either use this webapp and copy the figlet you like or you can also use the API I exposed for you. Make HTTP GET requests to <pre className="inline">/api</pre> and set the text parameter.<br/>
                             <b>Example</b>: <pre className="inline">/api?text=ASCII+art</pre> <br/>
                             Optionally you can set the font parameter to specify the output font (the available fonts are the ones you see in this page). <br/>
                             <b>Example</b>: <pre className="inline">/make?text=ASCII+art&font=trek</pre>
@@ -127,14 +114,16 @@ const Main = () => {
                         return (
                             <div key={key}>
                                 <h3>{figletObj.fontname}</h3>
-                                <div className="flex justify-center rounded-lg shadow-lg bg-white w-full mb-8 py-6">
+                                <div className="flex justify-center rounded-lg shadow-lg bg-white w-full mb-8 py-3">
                                     {figletObj.png !== null ? (
                                         <div className="w-11/12 text-center">
                                             <p className="mb-4">The Figlet was to long and was converted into an image. You can copy it anyway</p>
                                             <img src={figletObj.png} alt={`${figletObj.txt}-${key}`}/>
                                         </div>
                                     ) : (
-                                        <>{printFiglet(figletObj.txt, key)}</>
+                                        <>
+                                            <FigletClipboard figletTxt={figletObj.txt} />
+                                        </>
                                     )}
                                 </div>
                             </div>

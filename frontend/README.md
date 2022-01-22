@@ -38,9 +38,10 @@ Your app is ready to be deployed!
 - [x] Figlet as images when too big
 - [x] Edit logo and favicon
 - [x] Check Responsiveness
-- [ ] Add copy to ``<pre>`` tags
+- [x] Add copy to ``<pre>`` tags
 - [x] Add description and reference to GitHub
 - [x] Add loader
+- [ ] Make the image copyable as well
 
 ## License
 **asciified** is an open-source and free software released under the [GNU GPL v3](https://github.com/thelicato/asciified/blob/main/LICENSE).
