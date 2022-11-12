@@ -7,7 +7,7 @@
     "license": "GPL-3.0",
     "scripts": {
       "start": "node backend/src/app.js",
-      "heroku-postbuild": "cd backend && yarn install && cd ../frontend && yarn install --only=dev && yarn install && yarn run build"
+      "build": "cd backend && yarn install && cd ../frontend && yarn install --only=dev && yarn install && yarn run build"
     },
     "engines": {
         "node": "14.17.4",
