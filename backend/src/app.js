@@ -11,7 +11,7 @@ const api = require('./api');
 const logger = require('./logger');
 // ENV VARS   *
 const PORT = process.env.PORT || 4200;
-const NODE_ENV = process.env.NODE_ENV || 'production';
+const NODE_ENV = process.env.NODE_ENV || 'development';
 const DEFAULT_HOSTNAME = "asciified.thelicato.io";
 
 const startBackend = async () => {
