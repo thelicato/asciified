@@ -11,7 +11,8 @@ const api = require('./api');
 const logger = require('./logger');
 // ENV VARS   *
 const PORT = process.env.PORT || 4200;
-const NODE_ENV = process.env.NODE_ENV || 'development';
+const NODE_ENV = process.env.NODE_ENV || 'production';
+const DEFAULT_HOSTNAME = "asciified.thelicato.io";
 
 const startBackend = async () => {
     logger.info(`Starting up API routes on port ${PORT}...`);
@@ -23,6 +24,14 @@ const startBackend = async () => {
     if (NODE_ENV === "production"){
         const CLIENT_BUILD_PATH = path.join(__dirname, "../../frontend/build")
         // Static files
+        app.use(async (ctx, next) => {
+            if (ctx.hostname !== DEFAULT_HOSTNAME) {
+                ctx.status=301;
+                ctx.redirect(`https://${DEFAULT_HOSTNAME}${ctx.url}`);
+            } else {
+                await next()
+            }
+        });
         app.use(mount('/',serve(CLIENT_BUILD_PATH)))
     }
 
