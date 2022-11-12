@@ -10,7 +10,7 @@
       "build": "cd backend && yarn install && cd ../frontend && yarn install --only=dev && yarn install && yarn run build"
     },
     "engines": {
-        "node": "14.17.4",
-        "yarn": "1.22.11"
+        "node": ">=14.17.4",
+        "yarn": ">=1.22.11"
     }
   }
