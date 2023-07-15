@@ -1,5 +1,5 @@
 {
-  "name": "asciified-frontend",
+  "name": "@asciified/frontend",
   "version": "1.0.0",
   "description": "ASCII Art API with a good-looking Web App.",
   "repository": "https://github.com/thelicato/asciified",

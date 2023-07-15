@@ -1,5 +1,5 @@
 {
-  "name": "asciified-backend",
+  "name": "@asciified/backend",
   "version": "1.0.0",
   "description": "ASCII Art API with a good-looking Web App.",
   "main": "src/app.js",

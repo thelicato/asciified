@@ -1,16 +1,19 @@
 {
-    "name": "asciified",
-    "version": "1.0.0",
-    "description": "ASCII Art API with a good-looking Web App.",
-    "repository": "https://github.com/thelicato/asciified",
-    "author": "Angelo Delicato <delicato.angelo@gmail.com>",
-    "license": "GPL-3.0",
-    "scripts": {
-      "start": "node backend/src/app.js",
-      "build": "cd backend && yarn install && cd ../frontend && yarn install --only=dev && yarn install && yarn run build"
-    },
-    "engines": {
-        "node": ">=14.17.4",
-        "yarn": ">=1.22.5"
-    }
+  "name": "asciified",
+  "version": "1.0.0",
+  "description": "ASCII Art API with a good-looking Web App.",
+  "repository": "https://github.com/thelicato/asciified",
+  "author": "Angelo Delicato <delicato.angelo@gmail.com>",
+  "license": "GPL-3.0",
+  "scripts": {
+    "start": "pnpm --parallel --stream -r start",
+    "dev": "pnpm --parallel --stream -r dev",
+    "build": "pnpm --stream -r run build",
+    "lint": "pnpm --parallel --stream -r lint",
+    "lint:fix": "pnpm --parallel --stream -r lint:fix"
+  },
+  "engines": {
+    "node": ">=14.17.4",
+    "yarn": ">=1.22.5"
   }
+}
