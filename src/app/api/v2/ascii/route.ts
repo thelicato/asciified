@@ -22,7 +22,7 @@ export async function GET(req: Request) {
       width: 420,
       whitespaceBreak: true,
     });
-    return NextResponse.json({ art: figletTxt });
+    return new NextResponse(figletTxt);
   } catch (e) {
     console.log("An error occurred in /api/v2/ascii");
     console.log(e);
