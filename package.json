@@ -6,14 +6,31 @@
   "author": "Angelo Delicato <delicato.angelo@gmail.com>",
   "license": "GPL-3.0",
   "scripts": {
-    "start": "pnpm --parallel --stream -r start",
-    "dev": "pnpm --parallel --stream -r dev",
-    "build": "pnpm --stream -r run build",
-    "lint": "pnpm --parallel --stream -r lint",
-    "lint:fix": "pnpm --parallel --stream -r lint:fix"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "engines": {
-    "node": ">=14.17.4",
-    "yarn": ">=1.22.5"
+  "dependencies": {
+    "@types/node": "20.4.2",
+    "@types/react": "18.2.15",
+    "@types/react-dom": "18.2.7",
+    "autoprefixer": "10.4.14",
+    "dom-to-image": "^2.6.0",
+    "eslint": "8.45.0",
+    "eslint-config-next": "13.4.10",
+    "figlet": "^1.6.0",
+    "next": "13.4.10",
+    "postcss": "8.4.26",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.10.1",
+    "tailwindcss": "3.3.3",
+    "typescript": "5.1.6",
+    "use-clipboard-copy": "^0.2.0"
+  },
+  "devDependencies": {
+    "@types/dom-to-image": "^2.6.4",
+    "@types/figlet": "^1.5.6"
   }
 }
