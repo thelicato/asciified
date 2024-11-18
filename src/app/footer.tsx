@@ -38,15 +38,6 @@ const Footer = () => {
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
             <a
               className="ml-3 text-gray-500 hover:text-white transition-colors duration-300"
-              href="https://twitter.com/thelicato"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaTwitter size={24} />
-            </a>
-
-            <a
-              className="ml-3 text-gray-500 hover:text-white transition-colors duration-300"
               href="https://github.com/thelicato"
               target="_blank"
               rel="noreferrer"
