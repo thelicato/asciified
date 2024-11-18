@@ -23,6 +23,7 @@ export default function RootLayout({
         <Header />
         <FontsProvider>{children}</FontsProvider>
         <Footer />
+        <script defer src="https://analytics.thelicato.io/script.js" data-website-id="eebc3d47-f0c5-4538-bb05-f7a6acee4c08"></script>
       </body>
     </html>
   );
