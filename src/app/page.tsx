@@ -125,7 +125,7 @@ export default function Home() {
                 <b>Example</b>:{" "}
               </p>
               <pre className="inline">
-                /api/v2/ascii??text=ASCII+art&font=Trek
+                /api/v2/ascii?text=ASCII+art&font=Trek
               </pre>
             </div>
 
