@@ -5,8 +5,12 @@ export const asyncFiglet = (
   text: string,
   options: figlet.Options = { font: "Standard" }
 ): Promise<string> => {
+  // Handle RTL fonts by reversing the input text
+  const isRTLFont = options.font === "Ivrit";
+  const processedText = isRTLFont ? text.split('').reverse().join('') : text;
+
   return new Promise((resolve, reject) => {
-    figlet.text(text, options as figlet.Options, (err, data) => {
+    figlet.text(processedText, options as figlet.Options, (err, data) => {
       if (err) {
         return reject(err);
       } else {
