@@ -23,7 +23,7 @@ export default function RootLayout({
         <Header />
         <FontsProvider>{children}</FontsProvider>
         <Footer />
-        <script defer src="https://analytics.thelicato.io/script.js" data-website-id="eebc3d47-f0c5-4538-bb05-f7a6acee4c08"></script>
+        <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0d92831dd4f24b209adc006559a1146f"}'></script><!-- End Cloudflare Web Analytics -->
       </body>
     </html>
   );
