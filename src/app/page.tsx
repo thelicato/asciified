@@ -1,7 +1,7 @@
 "use client";
 
 import { KeyboardEventHandler, useEffect, useRef, useState } from "react";
-import { parseFont } from "figlet";
+import figlet from "figlet";
 import { useFonts } from "@asciified/app/fonts";
 import { IFigletObject } from "@asciified/app/types";
 import { asyncFiglet, makeImage } from "@asciified/app/helpers";
@@ -34,10 +34,12 @@ export default function Home() {
   const getFiglets = async (initialTxt: string) => {
     const _figletObjects = await Promise.all(
       fonts.map(async (fontName: string) => {
-        const font = await import(`figlet/importable-fonts/${fontName}.js`);
-        parseFont(fontName, font.default);
+        const font = await import(
+          `../../node_modules/figlet/importable-fonts/${fontName}.js`
+        );
+        figlet.parseFont(fontName, font.default);
         const txt = await asyncFiglet(initialTxt, {
-          font: fontName as figlet.Fonts,
+          font: fontName as figlet.FontName,
         });
         return { fontName: fontName, txt: txt, png: null };
       })

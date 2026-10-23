@@ -1,4 +1,4 @@
-import figlet, { parseFont } from "figlet";
+import figlet from "figlet";
 import { NextResponse } from "next/server";
 import { SUPPORTED_FONTS } from "@asciified/app/constants";
 import { asyncFiglet } from "@asciified/app/helpers";
@@ -14,10 +14,12 @@ export async function GET(req: Request) {
 
   // Otherwise get a asciified text
   try {
-    const font = await import(`figlet/importable-fonts/${figletFont}.js`);
-    parseFont(figletFont, font.default);
+    const font = await import(
+      `../../../../../node_modules/figlet/importable-fonts/${figletFont}.js`
+    );
+    figlet.parseFont(figletFont, font.default);
     const figletTxt = await asyncFiglet(queryText, {
-      font: figletFont as figlet.Fonts,
+      font: figletFont as figlet.FontName,
       horizontalLayout: "default",
       width: 420,
       whitespaceBreak: true,

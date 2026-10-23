@@ -23,7 +23,13 @@ export default function RootLayout({
         <Header />
         <FontsProvider>{children}</FontsProvider>
         <Footer />
-        <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0d92831dd4f24b209adc006559a1146f"}'></script><!-- End Cloudflare Web Analytics -->
+        {/* Cloudflare Web Analytics */}
+        <script
+          type="module"
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token": "0d92831dd4f24b209adc006559a1146f"}'
+        />
+        {/* End Cloudflare Web Analytics */}
       </body>
     </html>
   );
